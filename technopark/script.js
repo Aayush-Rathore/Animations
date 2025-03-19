@@ -52,20 +52,22 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("timer").style.display = "flex";
       event.stopPropagation();
       let timeLeft = 10;
+      const counting = new Audio("../counting.mp3");
       const timerDisplay = document.getElementById("count");
       timerDisplay.innerText = timeLeft;
 
       const timerInterval = setInterval(() => {
+        counting.play();
         timeLeft--;
         timerDisplay.innerText = timeLeft;
         if (timeLeft <= 0) {
           clearInterval(timerInterval);
           timerDisplay.innerText = "Going Live";
           const audio = new Audio("./clapping.mp3");
+          counting.pause();
           audio.play();
           setTimeout(() => {
-            window.location.href = "https://techno-park.in"
-            audio.pause();
+            window.location.href = "https://techno-park.in";
           }, 3000);
         }
       }, 1000);
