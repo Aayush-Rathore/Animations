@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="stage" class="hidden">
+      <div class="left-curtain curtain" id="left-curtain"></div>
+      <div class="right-curtain curtain" id="right-curtain"></div>
+      <div class="content">
+        <img src="CVRUlogo.png" alt="Logo" />
+        <button id="redirectButton" class="pushable">
+          <span class="floating">Go Live</span>
+        </button>
+      </div>
+    </div>
+    <div class="timer" id="timer" style="display: none">
+      <div id="count">10</div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("stage").addEventListener("click", () => {
+      document.getElementById("right-curtain").classList.add("open");
+      document.getElementById("left-curtain").classList.add("open");
+    });
+  </script>
+</html>
