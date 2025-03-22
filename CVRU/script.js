@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
           counting.pause();
           audio.play();
           setTimeout(() => {
-            window.location.href = "https://cvrump.ac.in";
+            window.location.href = "http://3.111.136.186";
           }, 3000);
         }
       }, 1000);
